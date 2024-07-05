@@ -27,19 +27,6 @@ document.getElementById('color-scheme-1').addEventListener('click', applyColorSc
 document.getElementById('color-scheme-2').addEventListener('click', applyColorScheme2);
 
 
-const targetElements = document.querySelectorAll('a img');
-function increaseCursorWeight(event) {
-    event.target.style.cursor = 'progress';
-}
-function resetCursor(event) {
-    event.target.style.cursor = 'auto';
-}
-targetElements.forEach(function(element) {
-    element.addEventListener('mouseover', increaseCursorWeight);
-    element.addEventListener('mouseout', resetCursor);
-});
-
-
 const currentTime = new Date();
 const currentHour = currentTime.getHours();
 let greetingMessage;
